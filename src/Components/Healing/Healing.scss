@@ -1,0 +1,11 @@
+@import '../../App.scss';
+
+.healing {
+    background-color: $subBG;
+    border-radius: 10px;
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: 12% 88%;
+    align-items: center;
+    
+}

@@ -1,0 +1,105 @@
+@import "../../App.scss";
+
+.welcome {
+    width: 100%;
+    height: 100%;
+    background-color: $subBG;
+    padding: 2rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../images/world.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    .text {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+
+        @media only screen and (max-width: 640px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h2 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1.3rem;
+            width: max-content;
+            @media only screen and (max-width: 756px) {
+                font-size: 2.5rem;
+            }
+            @media only screen and (max-width: 640px) {
+                font-size: 2rem;
+            }
+        }
+        .search {
+            position: relative;
+            input {
+                display: flex;
+                width: 95%;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                border-bottom: 2px solid $subText;
+                font-size: 1.6rem;
+                color: $purple;
+                font-weight: 700;
+                transition: all 0.3s ease;
+                padding: 0.8rem;
+                &::placeholder {
+                    color: white;
+                    font-weight: 500;
+                }
+
+                &:focus {
+                    border-bottom: 2px solid $purple;
+                    transition: all 0.3s ease;
+                    &::placeholder {
+                        opacity: 0;
+                    }
+                }
+            }
+            button {
+                position: absolute;
+                left: 5%;
+                top: 25%;
+                background: transparent;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                &:hover {
+                    & i {
+                        color: $purple;
+                        opacity: 1;
+                    }
+                }
+                i {
+                    color: white;
+                    font-size: 1.6rem;
+                    opacity: 0.6;
+                }
+            }
+            .empty {
+                opacity: 0;
+                height: 0;
+                transition: opacity 0.2s ease;
+            }
+            .error {
+                position: absolute;
+                color: $red;
+                font-size: 1.4rem;
+                padding-right: 1rem;
+                display: block;
+                margin-top: 1rem;
+                display: flex;
+                justify-content: center;
+                opacity: 1;
+                transition: opacity 0.2s ease-out;
+            }
+        }
+    }
+}

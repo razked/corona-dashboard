@@ -1,0 +1,55 @@
+@import '../../App.scss';
+
+.brand {
+    padding-left: 2rem;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    direction: ltr;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (max-width: 640px) {
+        padding-left: .5rem;
+      }
+
+    .title {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        svg {
+            fill: $purple;
+            width: 2.7rem;
+            height: 2.7rem;
+            margin-right: 1rem;
+            animation: spin 8s linear infinite;
+        }
+    }
+    .contact {
+        justify-self: flex-end;
+        color: $subText;
+        font-size: 1.6rem;
+        width: max-content;
+        margin-right: 1rem;
+        // transform: translateY(-.2rem);
+        a {
+            color: $subText;
+            margin-left: .8rem;
+            font-size: 2rem;
+            transition: color .2s;
+
+            &:hover {
+                color: $purple;
+                transition: color .2s;
+            }
+        }
+        
+    }
+}
+
+@keyframes spin {
+    to {transform: rotate(1turn);}
+}

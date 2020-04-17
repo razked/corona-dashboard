@@ -1,0 +1,12 @@
+@import '../../App.scss';
+
+.israel {
+    background-color: $subBG;
+    border-radius: 10px;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    display: grid;
+    grid-template-rows: 12% 88%;
+    align-items: center;
+    
+}
